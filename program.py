@@ -13,4 +13,4 @@ def Index():
 sfdaocall = SFDAO.SFDAOClass("host='52.74.171.222' dbname='postgres' user='pureprofile' password='pureprofile'")
 
 bottle.debug(True)
-bottle.run(host="localhost",port=2353)
+bottle.run(host="52.74.171.222",port=2353)
