@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Sales force data</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Salesforce ID</th>
+        <th>Name</th>
+    </tr>
+    %for item in SFData:
+        <tr>
+            <td>{{item['sfid']}}</td>
+           <td>{{item['name']}}</td>
+        </tr>
+    %end
+</table>
+
+</body>
+</html>
