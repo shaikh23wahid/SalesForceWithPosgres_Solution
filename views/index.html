@@ -3,20 +3,79 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Sales force data</title>
-</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+ </head>
 <body>
-<table>
-    <tr>
-        <th>Salesforce ID</th>
-        <th>Name</th>
-    </tr>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <img style="width:80px;height:60px;" alt="Brand" src="http://assets.pureprofile.com/images/brands/pureprofile.png">
+     </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="jumbotron">
+  <h3>Salesforce data</h3>
+        <hr>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+        <strong>Salesforce ID</strong>
+    </div>
+    <div class="col-md-4">
+        <strong>Name</strong>
+    </div>
+  </div>
     %for item in SFData:
-        <tr>
-            <td>{{item['sfid']}}</td>
-           <td>{{item['name']}}</td>
-        </tr>
+  <div class="row">
+    <div class="col-md-4">{{item['sfid']}}</div>
+    <div class="col-md-4">{{item['name']}}</div>
+  </div>
     %end
-</table>
+</div>
+</div>
+</div>
+<div data-example-id="default-navbar" class="bs-example">
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+     
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  </div>
 
 </body>
 </html>

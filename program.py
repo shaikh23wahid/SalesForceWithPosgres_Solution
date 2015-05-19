@@ -4,6 +4,7 @@ import bottle
 import  SFDAO
 
 @bottle.route('/home')
+
 def Index():
 
     message ="welcome to python era"
@@ -13,4 +14,4 @@ def Index():
 sfdaocall = SFDAO.SFDAOClass("host='52.74.171.222' dbname='postgres' user='pureprofile' password='pureprofile'")
 
 bottle.debug(True)
-bottle.run(host='0.0.0.0', port=8080)
+bottle.run(host='localhost', port=8080)

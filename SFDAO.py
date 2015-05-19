@@ -28,3 +28,57 @@ class SFDAOClass:
             result.append(r)
 
         return  result
+
+    def get_groups_data(self):
+        groupresult = []
+        groupquery = "Select * from SFGroupsData"
+
+        cursor = self.db_connection.cursor()
+        cursor.execute(groupquery)
+        grows = cursor.fetchall()
+        cursor.close()
+
+        for row in grows:
+            r = {
+            "sfid": row[0],
+            "name": row[1]
+            }
+            groupresult.append(r)
+
+        return  groupresult
+
+    def get_brands_data(self):
+        brandsresult = []
+        brandquery = "Select * from SFBrandsData"
+
+        cursor = self.db_connection.cursor()
+        cursor.execute(brandquery)
+        brows = cursor.fetchall()
+        cursor.close()
+
+        for row in brows:
+            r = {
+            "sfid": row[0],
+            "name": row[1]
+            }
+            brandsresult.append(r)
+
+        return  brandsresult
+
+    def get_productcategories_data(self):
+        pcresult = []
+        pcquery = "Select * from SFBrandsData"
+
+        cursor = self.db_connection.cursor()
+        cursor.execute(pcquery)
+        pcrows = cursor.fetchall()
+        cursor.close()
+
+        for row in pcrows:
+            r = {
+            "sfid": row[0],
+            "name": row[1]
+            }
+            pcresult.append(r)
+
+        return  pcresult
