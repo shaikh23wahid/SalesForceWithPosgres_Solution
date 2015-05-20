@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Sales force data</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+ </head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <img style="width:80px;height:60px;" alt="Brand" src="http://assets.pureprofile.com/images/brands/pureprofile.png">
+     </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="jumbotron">
+  <h3>Salesforce data</h3>
+        <hr>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1">
+        <strong>Auto ID</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>SFGroup ID</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>Group Name</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>Group Description</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>Country</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>Group Criteriaid</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>Question</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>Answer ID</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>Answer Text</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>Answer Code</strong>
+    </div>
+  </div>
+    %for item in groupdata:
+  <div class="row">
+    <div class="col-md-4">{{item['autoid']}}</div>
+    <div class="col-md-4">{{item['sfgroupid']}}</div>
+    <div class="col-md-4">{{item['groupname']}}</div>
+    <div class="col-md-4">{{item['groupdescription']}}</div>
+    <div class="col-md-4">{{item['country']}}</div>
+    <div class="col-md-4">{{item['groupcriteriaid']}}</div>
+    <div class="col-md-4">{{item['question']}}</div>
+    <div class="col-md-4">{{item['answerid']}}</div>
+    <div class="col-md-4">{{item['answertext']}}</div>
+    <div class="col-md-4">{{item['answercode']}}</div>
+  </div>
+    %end
+</div>
+</div>
+</div>
+</body>
+</html>

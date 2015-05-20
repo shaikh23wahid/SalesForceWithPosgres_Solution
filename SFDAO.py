@@ -31,7 +31,7 @@ class SFDAOClass:
 
     def get_groups_data(self):
         groupresult = []
-        groupquery = "Select * from SFGroupsData"
+        groupquery = "Select * from groupcriteriawithanswers"
 
         cursor = self.db_connection.cursor()
         cursor.execute(groupquery)
@@ -40,8 +40,17 @@ class SFDAOClass:
 
         for row in grows:
             r = {
-            "sfid": row[0],
-            "name": row[1]
+            "autoid": row[0],
+            "sfgroupid": row[1],
+            "groupname": row[2],
+            "groupdescription":row[3],
+            "country":row[4],
+            "isavailabletothepublic":row[5],
+            "groupcriteriaid":row[6],
+            "question":row[7],
+            "answerid":row[8],
+            "answertext":row[9],
+            "answercode":[10]
             }
             groupresult.append(r)
 
