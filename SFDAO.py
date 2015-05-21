@@ -56,27 +56,9 @@ class SFDAOClass:
 
         return  groupresult
 
-    def get_brands_data(self):
-        brandsresult = []
-        brandquery = "Select * from SFBrandsData"
-
-        cursor = self.db_connection.cursor()
-        cursor.execute(brandquery)
-        brows = cursor.fetchall()
-        cursor.close()
-
-        for row in brows:
-            r = {
-            "sfid": row[0],
-            "name": row[1]
-            }
-            brandsresult.append(r)
-
-        return  brandsresult
-
     def get_productcategories_data(self):
         pcresult = []
-        pcquery = "Select * from SFBrandsData"
+        pcquery = "Select * from productcategories"
 
         cursor = self.db_connection.cursor()
         cursor.execute(pcquery)
@@ -85,9 +67,45 @@ class SFDAOClass:
 
         for row in pcrows:
             r = {
-            "sfid": row[0],
-            "name": row[1]
+            "autoid": row[0],
+            "productcategoryid": row[1],
+            "productcategoryname": row[2],
+            "productcategorybrandid":row[3],
+            "brandname":row[4],
+            "questionid":row[5],
+            "questionlabel":row[6],
+            "questiontext":row[7],
+            "countryname":row[8],
+            "answers":row[9],
+            "answerid":[10],
+            "answercode":[11],
+            "answertext":[12]
             }
             pcresult.append(r)
 
         return  pcresult
+
+    def get_brands_data(self):
+        bresult = []
+        bquery = "Select * from brands"
+
+        cursor = self.db_connection.cursor()
+        cursor.execute(bquery)
+        pcrows = cursor.fetchall()
+        cursor.close()
+
+        for row in pcrows:
+            r = {
+            "autoid": row[0],
+            "brandid": row[1],
+            "brandname": row[2],
+            "brandaccount":row[3],
+            "brandbriefandnotes":row[4],
+            "brandimageurl":row[5],
+            "brandtrackingurl":row[6],
+            "countofproductcategories":row[7],
+            "facebooklikes":row[8]
+            }
+            bresult.append(r)
+
+        return  bresult

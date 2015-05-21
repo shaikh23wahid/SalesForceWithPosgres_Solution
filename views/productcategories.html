@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Sales force data</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+ </head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <img style="width:80px;height:60px;" alt="Brand" src="http://assets.pureprofile.com/images/brands/pureprofile.png">
+     </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="jumbotron">
+  <h3>Salesforce data</h3>
+        <hr>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1">
+        <strong>Auto ID</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>ProductCategoryID</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>ProductCategoryName</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>ProductCategoryBrandID</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>BrandName</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>QuestionID</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>QuestionLabel</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>QuestionText</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>CountryName</strong>
+    </div>
+    <div class="col-md-1">
+        <strong>Answers</strong>
+    </div>
+  </div>
+    %for item in productcategoriesdata:
+  <div class="row">
+    <div class="col-md-1">{{item['autoid']}}</div>
+    <div class="col-md-1">{{item['productcategoryid']}}</div>
+    <div class="col-md-1">{{item['productcategoryname']}}</div>
+    <div class="col-md-1">{{item['productcategorybrandid']}}</div>
+    <div class="col-md-1">{{item['brandname']}}</div>
+    <div class="col-md-1">{{item['questionid']}}</div>
+    <div class="col-md-1">{{item['questionlabel']}}</div>
+    <div class="col-md-1">{{item['questiontext']}}</div>
+    <div class="col-md-1">{{item['countryname']}}</div>
+    <div class="col-md-1">{{item['answers']}}</div>
+  </div>
+    %end
+</div>
+</div>
+</div>
+</body>
+</html>
